@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.30)
+
+project(FazonEngine 
+    VERSION 0.01
+    DESCRIPTION "VerFG"
+    LANGUAGES CXX
+)
+
+# Add cmake directory to module path
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+# Include modular cmake configurations
+include(compiler_options)
+include(platform_detection)
+include(build_definitions)
+
+# Add main project targets
+add_subdirectory(Fazon)
+add_subdirectory(Sandbox)
+
+# Add vendor targets
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
