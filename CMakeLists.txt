@@ -13,6 +13,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(compiler_options)
 include(platform_detection)
 include(build_definitions)
+include(submodules)
 
 # Add main project targets
 add_subdirectory(Fazon)

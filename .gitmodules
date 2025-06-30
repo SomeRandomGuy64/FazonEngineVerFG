@@ -1,0 +1,3 @@
+[submodule "Fazon/vendor/NexusLogger"]
+	path = Fazon/vendor/NexusLogger
+	url = git@github.com:SomeRandomGuy64/NexusLogger.git

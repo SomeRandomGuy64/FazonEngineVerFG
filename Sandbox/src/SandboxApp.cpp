@@ -1,5 +1,19 @@
-#include <print>
+#include <Fazon.h>
 
-int main() {
-	std::println("Hello, world!");
+class Sandbox : public Fazon::Application {
+
+public:
+	Sandbox()
+	{
+	}
+
+	~Sandbox()
+	{
+
+	}
+
+};
+
+Fazon::Application* Fazon::createApplication() {
+	return new Sandbox();
 }
