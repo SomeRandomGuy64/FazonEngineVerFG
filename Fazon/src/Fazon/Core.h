@@ -12,8 +12,9 @@
 #endif
 
 #if FZ_ENABLE_ASSERTS
-	#define FZ_ASSERT(x, ...) { if(!(x)) { FZ_ERROR("Assertion Failed: "); DEBUG_BREAK(); } }
-	#define FZ_CORE_ASSERT(x, ...) { if(!(x)) { FZ_CORE_ERROR("Assertion Failed: "); DEBUG_BREAK(); } }
+	// temp fix for assert
+	#define FZ_ASSERT(x, ...) { if(!(x)) { FZ_ERROR("Assertion Failed: ", __VA_ARGS__); DEBUG_BREAK(); } }
+	#define FZ_CORE_ASSERT(x, ...) { if(!(x)) { FZ_CORE_ERROR("Assertion Failed: ", __VA_ARGS__); DEBUG_BREAK(); } }
 #else
 	#define FZ_ASSERT(x, ...)
 	#define FZ_CORE_ASSERT(x, ...)
