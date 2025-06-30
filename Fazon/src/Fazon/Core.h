@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef FZ_PLATFORM_WINDOWS
-	#pragma message("FZ_PLAYFORM_WINDOWS is defined")
+	#pragma message("FZ_PLATFORM_WINDOWS is defined")
 	#define DEBUG_BREAK() __debugbreak()
 #else
 	#error "Fazon only supports Windows!"
